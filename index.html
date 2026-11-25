@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BEYOND English Learning Club</title>
+  <meta name="description" content="Learning beyond the classroom — un espacio para aprender, crear y practicar inglés.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    :root { --navy:#173f55; --blue:#1f5b77; --sky:#eaf4f8; --gold:#e6b85c; --ink:#20313b; --muted:#61727b; --white:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--ink); background:#fff; }
+    a { color:inherit; }
+    .container { width:min(1120px, 92%); margin:auto; }
+    header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.94); backdrop-filter:blur(8px); border-bottom:1px solid #e6edf0; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 0; }
+    .brand img { display:block; width:210px; max-width:42vw; height:auto; }
+    nav { display:flex; flex-wrap:wrap; gap:22px; align-items:center; font-size:.95rem; }
+    nav a { text-decoration:none; color:var(--navy); font-weight:600; }
+    .btn { display:inline-block; border-radius:999px; padding:12px 20px; background:var(--blue); color:#fff; text-decoration:none; font-weight:700; }
+    .btn.secondary { background:#fff; color:var(--blue); border:1px solid #b9d2df; }
+    .hero { background:linear-gradient(135deg,#edf7fa 0%,#fff 65%); padding:76px 0 70px; }
+    .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; align-items:center; gap:48px; }
+    .author-line { color:var(--muted); font-size:.95rem; margin:12px 0 4px; }\n    .eyebrow { color:var(--blue); font-weight:800; letter-spacing:.13em; text-transform:uppercase; font-size:.8rem; }
+    h1 { font-size:clamp(2.5rem,6vw,4.6rem); line-height:1.04; letter-spacing:-.04em; margin:14px 0 20px; color:var(--navy); }
+    h1 span { color:var(--blue); }
+    .hero p { max-width:610px; font-size:1.15rem; line-height:1.7; color:var(--muted); }
+    .hero-art { background:#fff; border:1px solid #dbe9ef; border-radius:28px; padding:30px; box-shadow:0 18px 55px rgba(23,63,85,.08); text-align:center; }
+    .hero-art img { width:100%; max-width:440px; }
+    .hero-art .motto { color:var(--blue); font-weight:800; margin-top:12px; letter-spacing:.03em; }
+    section { padding:72px 0; }
+    .section-title { color:var(--navy); font-size:clamp(1.8rem,4vw,2.5rem); margin:0 0 14px; }
+    .lead { color:var(--muted); line-height:1.7; max-width:720px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:32px; }
+    .card { border:1px solid #e0ebef; border-radius:20px; padding:26px; background:#fff; }
+    .card .icon { width:48px; height:48px; border-radius:14px; display:grid; place-items:center; background:var(--sky); font-size:1.4rem; margin-bottom:16px; }
+    .card h3 { color:var(--navy); margin:0 0 10px; }
+    .card p { color:var(--muted); line-height:1.65; margin:0; }
+    .about { background:#f7fafb; }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:42px; align-items:center; }
+    .quote { border-left:4px solid var(--gold); padding:20px 26px; background:white; border-radius:0 16px 16px 0; color:var(--navy); font-size:1.25rem; font-weight:700; line-height:1.5; }
+    .activities { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:30px; }
+    .activity { border-radius:18px; padding:22px; background:var(--sky); }
+    .activity h3 { margin:0 0 8px; color:var(--navy); }
+    .activity p { margin:0; color:var(--muted); line-height:1.6; }
+    .cta { background:var(--navy); color:#fff; text-align:center; padding:58px 20px; }
+    .cta h2 { font-size:clamp(1.8rem,4vw,2.6rem); margin:0 0 12px; }
+    .cta p { color:#d8e8ef; margin:0 auto 24px; max-width:650px; line-height:1.7; }
+    .cta .btn { background:var(--gold); color:var(--navy); }
+    footer { padding:26px 0; background:#102f40; color:#d9e6eb; }
+    .footer-row { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    footer small { color:#a9c0cb; }
+    @media(max-width:760px) {
+      .nav { align-items:flex-start; flex-direction:column; }
+      nav { gap:14px; }
+      .hero-grid,.about-grid { grid-template-columns:1fr; }
+      .hero { padding:48px 0; }
+      .cards { grid-template-columns:1fr; }
+      .activities { grid-template-columns:1fr; }
+      section { padding:52px 0; }
+      .footer-row { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#inicio" aria-label="BEYOND inicio"><img src="assets/beyond-logo.svg" alt="BEYOND English Learning Club"></a>
+    <nav aria-label="Navegación principal">
+      <a href="#club">El club</a><a href="#creador">El creador</a><a href="#actividades">Actividades</a><a href="#recursos">Recursos</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">English Learning Club</div>
+        <div class="author-line">Founded by <strong>Lic. Rafael Ortega Correa</strong></div>
+        <h1>Learn English.<br><span>Go beyond.</span></h1>
+        <p>Un espacio para descubrir, practicar y crear en inglés. Aprendemos más allá del aula, conectando el idioma con nuestra vida, nuestra cultura y nuestras ideas.</p>
+        <a class="btn" href="#club">Conoce BEYOND</a>
+        <a class="btn secondary" href="#actividades" style="margin-left:8px">Explora actividades</a>
+      </div>
+      <div class="hero-art">
+        <img src="assets/beyond-logo.svg" alt="Logo BEYOND">
+        <div class="motto">Learning beyond the classroom.</div>
+      </div>
+    </div>
+  </section>
+  <section id="club">
+    <div class="container">
+      <h2 class="section-title">¿Qué es BEYOND?</h2>
+      <p class="lead">BEYOND English Learning Club es una comunidad educativa para aprender inglés de manera activa, creativa y significativa. Aquí el idioma no se queda en el cuaderno: lo usamos para comunicarnos, compartir conocimientos y explorar el mundo.</p>
+      <div class="cards">
+        <article class="card"><div class="icon">💬</div><h3>Practice</h3><p>Practicamos inglés con conversaciones, juegos, retos y situaciones cotidianas.</p></article>
+        <article class="card"><div class="icon">🎨</div><h3>Create</h3><p>Desarrollamos proyectos, presentaciones y productos creativos usando el idioma.</p></article>
+        <article class="card"><div class="icon">🌱</div><h3>Connect</h3><p>Conectamos el inglés con nuestro entorno, nuestras raíces y lo que queremos aprender.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container about-grid">
+      <div>
+        <h2 class="section-title">Learning beyond the classroom</h2>
+        <p class="lead">Creemos que aprender inglés es una oportunidad para expresarnos, colaborar y descubrir nuevas posibilidades sin dejar de valorar quiénes somos y de dónde venimos.</p>
+      </div>
+      <div class="quote">“Every new word opens a new door.”<br><small>— Cada nueva palabra abre una nueva puerta.</small></div>
+    </div>
+  </section>
+
+  <section id="creador" class="about">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow">Founded by</div>
+        <h2 class="section-title">Rafael Ortega Correa</h2>
+        <p class="lead">BEYOND English Learning Club was founded by <strong>Rafael Ortega Correa</strong>, a graduate of Universidad del Atlántico with the degree <strong>Licenciatura en Ciencias de la Educación con énfasis en Lenguas Modernas, especialidad Inglés-Español</strong>. With more than two decades of teaching experience, he brings together learning, creativity and the desire to explore English beyond the classroom.</p>
+      </div>
+      <div class="quote">“Teaching is opening doors so learners can discover how far they can go.”<br><small>— Rafael Ortega Correa</small></div>
+    </div>
+  </section>
+
+  <section id="actividades">
+    <div class="container">
+      <h2 class="section-title">What can we do?</h2>
+      <p class="lead">Ideas de actividades que podemos desarrollar en el club.</p>
+      <div class="activities">
+        <article class="activity"><h3>🎤 Speaking challenges</h3><p>Pequeños retos para hablar, preguntar, describir y compartir ideas.</p></article>
+        <article class="activity"><h3>🧩 Games & vocabulary</h3><p>Juegos, palabras nuevas, expresiones y dinámicas para aprender juntos.</p></article>
+        <article class="activity"><h3>🌿 Local culture projects</h3><p>Presentamos nuestra comunidad, alimentos, tradiciones y entorno en inglés.</p></article>
+        <article class="activity"><h3>📚 Creative projects</h3><p>Historias, carteles, videos, exposiciones y proyectos hechos por estudiantes.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="recursos" class="about">
+    <div class="container">
+      <h2 class="section-title">Learning resources</h2>
+      <p class="lead">Aquí podremos reunir guías, vocabulario, actividades, enlaces y materiales de apoyo para seguir practicando.</p>
+      <div class="cards">
+        <article class="card"><div class="icon">📖</div><h3>Vocabulary</h3><p>Listas y actividades para aprender palabras y expresiones.</p></article>
+        <article class="card"><div class="icon">✍️</div><h3>Practice</h3><p>Ejercicios y retos para fortalecer las habilidades en inglés.</p></article>
+        <article class="card"><div class="icon">🔗</div><h3>Useful links</h3><p>Herramientas y recursos digitales para aprender y practicar.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="cta" id="contacto">
+    <h2>Come and go beyond!</h2>
+    <p>Learning beyond the classroom. Practicing English, sharing ideas and creating together.</p>
+    <a class="btn" href="mailto:">Contact the club</a>
+  </section>
+</main>
+<footer>
+  <div class="container footer-row"><div><strong>BEYOND English Learning Club</strong><br><small>Learning beyond the classroom.</small></div><small>Educational project · Draft website</small></div>
+</footer>
+</body>
+</html>
